@@ -30,14 +30,15 @@ h6 {
 	font-size:13px;
 }
 .header-transparent .header-nav .nav > li.active > a{
-	color:#5848FB;
+	color:#00ffff;
+  box-shadow: 0px 0px 1em #3d3d3d;
 }
 .header-transparent .is-fixed .main-bar {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .header-transparent .header-nav .nav > li > a {
     border-radius: 30px;
-    color: #000000;
+    color: #fff;
     font-weight: 600;
     padding: 5px 15px;
 }
@@ -45,7 +46,7 @@ h6 {
     padding: 20px 0;
 }
 /*===================
-	 Spacing CSS 
+	 Spacing CSS
 =================== */
 .site-footer .widget_getintuch{
 	padding-top:0;
@@ -135,7 +136,7 @@ h6 {
 	.myNavbar .navbar-right{
 		margin-right:5px;
 	}
-	
+
 }
 @media only screen and (max-width: 767px) {
 	.creative-work .card-container{
@@ -163,19 +164,19 @@ h6 {
     width: 100%;
 }
 .app-banner .container {
-	
+
 }
 .app-banner h2{
 	font-size:50px;
 	line-height:70px;
 	font-weight: 600;
-	
+
 	background: #5848fb; /* Old browsers */
-	background: -moz-linear-gradient(left, #5848fb 37%, #ef3de3 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #5848fb 37%,#ef3de3 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #5848fb 37%,#ef3de3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(left, #00ffff 100%, #00ffff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #00ffff 100%, #00ffff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #00ffff 100%, #00ffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5848fb', endColorstr='#ef3de3',GradientType=1 );
-	
+
 	background-clip: text;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -194,7 +195,7 @@ h6 {
 	background: -webkit-linear-gradient(left, #5848fb 37%,#ef3de3 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, #5848fb 37%,#ef3de3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5848fb', endColorstr='#ef3de3',GradientType=1 );
-	
+
 	background-clip: text;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -208,7 +209,7 @@ h6 {
 	display:inline-block;
 }
 .app-banner p{
-	color:#000;
+	color:#fff;
 	font-size:16px;
 	line-height:28px;
 }
@@ -233,19 +234,19 @@ h6 {
 .radius-xl.outline{
 	border-radius:30px;
 	border-width:2px;
-	border-color:#5848fb;
+	border-color:#00ffff;
 	background-color:transparent;
 	transition:all 0.5s;
-	color:#000;
+	color:#fff;
 }
 .site-button.outline:hover,
 .site-button.outline:focus{
 	background: #5848fb !important; /* Old browsers */
-	background: -moz-linear-gradient(left, #ef3de3 -20%, #5848fb 100%) !important; /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #ef3de3 20%,#5848fb 100%) !important; /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #ef3de3 20%,#5848fb 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5848fb', endColorstr='#ef3de3',GradientType=1 ) !important;
-	
+	background: -moz-linear-gradient(left, #00ffff 100%, #00ffff 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #00ffff 100%, #00ffff 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #00ffff 100%, #00ffff 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffff', endColorstr='#00ffff',GradientType=1 ) !important;
+
 	color:#fff !important;
 }
 
@@ -273,8 +274,8 @@ h6 {
 }
 
 /*==== Particles ====*/
-#particles-js .container{ 
-	z-index:2; 
+#particles-js .container{
+	z-index:2;
 	position: relative;
 }
 .moving-bg {
@@ -299,12 +300,12 @@ h6 {
 @-webkit-keyframes cloudwash {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); 
+    transform: translate3d(0, 0, 0);
 	}
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0); 
-	} 
+    transform: translate3d(-50%, 0, 0);
+	}
 }
 
 @keyframes cloudwash {
@@ -313,12 +314,12 @@ h6 {
     transform: translate3d(0, 0, 0); }
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0); } 
+    transform: translate3d(-50%, 0, 0); }
 }
 
 /* Overlay primary */
-.overlay-primary-light:after, 
-.overlay-primary-middle:after, 
+.overlay-primary-light:after,
+.overlay-primary-middle:after,
 .overlay-primary-dark:after,
 .bg-primary{
 	background: #5848fb; /* Old browsers */
@@ -376,7 +377,7 @@ h6 {
 }
 .mobile-download h2{
 	font-size:35px;
-	
+
 }
 .app-icon{
 	margin:0;
@@ -475,7 +476,7 @@ h6 {
 }
 .pricingtable-inner{
 	text-align:left;
-	
+
 }
 .pricingtable-bx{
 	font-weight: 700;
@@ -534,7 +535,7 @@ h6 {
 .trans-footer .footer-top{
 	padding:100px 0 50px 0;
 }
-.trans-footer .footer-top, 
+.trans-footer .footer-top,
 .trans-footer .footer-bottom{
 	background-color:rgba(0,0,0,0.2);
 	z-index:2;
