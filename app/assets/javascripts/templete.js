@@ -112,29 +112,29 @@ function manageParticle(tag_id){
   "retina_detect": true
 }
 );
-	
+
 }
 
-/* Document.ready Start */	
+/* Document.ready Start */
 $(document).ready(function() {
     'use strict';
-	
+
 	manageParticle('app-banner');
-	
-	manageParticle('mobile-app');
-	
+
+	manageParticle('about-us');
+
 	manageParticle('mobile-download');
-	
+
 	manageParticle('testimonial');
-	
+
 	manageParticle('footer');
-	
+
 	$('.raindrop').raindrops(
 		{color:'#fff',
 		canvasHeight:80,
 		rippleSpeed: 0.01,
 		frequency: 2,
 		density: 0});
-	
+
 });
 /* Document.ready END */
