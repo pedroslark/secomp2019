@@ -619,6 +619,7 @@ h6 {
 		border-radius: 0;
 		font-weight: 500;
 		padding: 12px 20px;
+    background-color: rgba(6, 6, 43, 0.5);
 	}
 	.site-header.header-transparent .navbar-toggler span{
 		background-color:#000;
