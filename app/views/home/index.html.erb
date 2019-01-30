@@ -32,26 +32,26 @@
                 <div class="container clearfix">
                     <!-- website logo -->
                     <div class="logo-header mostion">
-						<a href="index.html"><img src="logo.png" alt=""></a>
-					</div>
+											<a href="index.html"><img src="logo.png" alt=""></a>
+										</div>
                     <!-- nav toggle button -->
                     <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
+											<span></span>
+											<span></span>
+											<span></span>
+										</button>
                     <!-- main nav -->
                     <div class="header-nav navbar-collapse collapse navbar myNavba justify-content-end" id="navbarNavDropdown">
-						<ul class="nav navbar-nav">
-							<li><%= link_to 'home' ,"#app-banner", class: "nav-link scroll"%></li>
-							<li><%= link_to 'A Semana' ,"#about-us", class: "nav-link scroll"%></li>
-							<li><%= link_to 'Palestras' ,"#features", class: "nav-link scroll"%></li>
-							<li><%= link_to 'Cursos' ,"#services", class: "nav-link scroll"%></li>
-							<li><%= link_to 'Camisetas' ,"#screenshots", class: "nav-link scroll"%></li>
-							<li><%= link_to 'Simposio' ,"#pricing", class: "nav-link scroll"%></li>
-							<li><%= link_to 'Extra' ,"#news", class: "nav-link scroll"%></li>
-
-					</div>
+											<ul class="nav navbar-nav">
+												<li><%= link_to 'home' ,"#app-banner", class: "nav-link scroll"%></li>
+												<li><%= link_to 'A Semana' ,"#about-us", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Palestras' ,"#features", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Cursos' ,"#services", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Camisetas' ,"#screenshots", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Simposio' ,"#pricing", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Extra' ,"#news", class: "nav-link scroll"%></li>
+											</ul>
+										</div>
                 </div>
             </div>
         </div>
@@ -85,8 +85,19 @@
 		<div class="section-full bg-white content-inner app-about about-us raindrop" id="register">
 			<div class="container">
 				<div class="row equal-wraper">
-					<div class="col-lg-6 col-md-5 equal-col dis-tbl m-b30">
 
+					<div class="col-lg-7 col-md-7 equal-col dis-tbl">
+						<div class="dis-tbl-cell p-l40">
+							<div class="section-head inner-haed ">
+								<h2 class="h2 text-uppercase">Secomp 2019</h2>
+								<div class="dlab-separator bg-primary"></div>
+								<p>Preencha o formulário de inscrição para participar das atividades da semana da computação.</p>
+								</div>							
+						</div>
+					</div>
+
+
+					<div class="col-lg-5 col-md-5 equal-col dis-tbl m-b30">
 
 						<%= form_for @student , :url => root_path do |form| %>
 
@@ -96,62 +107,51 @@
 	          		<%end%>
 	        		<%end%>
 
-							<div class="input-group">
-								<span class="input-group-addon"><i class="ti-user text-primary"></i></span>
-								<%= form.text_field :name, class:"form-control", placeholder: "Nome Completo*"%>
-							</div><br>
+							<div class='container'>
+								<div class='window'>
+									<div class='overlay'></div>
+									<div class="moving-bg"></div>
+									<div class='content'>
+										<div class='welcome'>Inscreva-se</div>
+										<div class='input-fields'>
 
-							<div class="input-group">
-								<span class="input-group-addon"><i class="ti-email text-primary"></i></span>
-								<%= form.text_field :email, class:"form-control", placeholder: "Email Válido*"%>
-							</div><br>
+											<div class="input-group">
+												<%= form.text_field :name, class:"input-line full-width", placeholder: "Nome Completo*"%>
+											</div>
 
-							<div class="input-group">
-								<span class="input-group-addon"><i class=" text-primary"></i></span>
-								<%= form.text_field :institution, class:"form-control", placeholder: "Instituição de Ensino"%>
-							</div><br>
+											<div class="input-group">
+												<%= form.text_field :email, class:"input-line full-width", placeholder: "Email Válido*"%>
+											</div>
 
-							<div class="input-group">
-								<span class="input-group-addon"><i class="ti-book text-primary"></i></span>
-								<%= form.text_field :course, class:"form-control", placeholder: "Curso"%>
-							</div><br>
+											<div class="input-group">
+												<%= form.text_field :institution, class:"input-line full-width", placeholder: "Instituição de Ensino"%>
+											</div>
 
-							<div class="input-group">
-								<span class="input-group-addon"><i class="ti-id-badge text-primary"></i></span>
-								<%= form.text_field :registration, class:"form-control", placeholder: "Código de Matrícula"%>
-							</div><br>
+											<div class="input-group">
+												<%= form.text_field :course, class:"input-line full-width", placeholder: "Curso"%>
+											</div>
 
-							<div class="input-group">
-								<span class="input-group-addon"><i class="ti-mobile text-primary"></i></span>
-								<%= form.text_field :phone, class:"form-control", placeholder: "Telefone"%>
-							</div><br>
+											<div class="input-group">
+												<%= form.text_field :registration, class:"input-line full-width", placeholder: "Código de Matrícula"%>
+											</div>
 
-							<div class="">
-								<%= form.submit "Inscrever-se", class:"site-button radius-xl" %>
+											<div class="input-group">
+												<%= form.text_field :phone, class:"input-line full-width", placeholder: "Telefone"%>
+											</div>
+
+											<div class="">
+												<br><%= form.submit "Confirmar", class:"site-button outline radius-xl full-width" %><br><br><br><br>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 
 						<%end%>
 
 					</div>
-					<div class="col-lg-6 col-md-7 equal-col dis-tbl">
-						<div class="dis-tbl-cell p-l40">
-							<div class="section-head inner-haed ">
-								<h2 class="h2 text-uppercase">Easy to use</h2>
-								<div class="dlab-separator bg-primary"></div>
-								<p>Winkit looks great on your desk. Winkit is the most powerful and flexible app. You should check out Rise, our beautifully simple app.</p>
-							</div>
-							<ul class="list-check primary">
-								<li>Packed With Amazing Features.</li>
-								<li>Relaible And Secure Flatform.</li>
-								<li>Everything Is perfectly organized.</li>
-								<li>Attach Large Life Easily.</li>
-							</ul>
-							<div class="m-t30">
-								<a href="#" class="site-button radius-xl m-r10"><i class="fa fa-play m-r5"></i> Google Play</a>
-								<a href="#" class="site-button radius-xl outline"><i class="fa fa-apple m-r5"></i> App Store</a>
-							</div>
-						</div>
-					</div>
+
+
 				</div>
 			</div>
 		</div>

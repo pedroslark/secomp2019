@@ -165,7 +165,7 @@ var Winkit = function(){
 
 		jQuery(window).bind("scroll", function() {
 			var scroll = jQuery(window).scrollTop();
-			if (scroll > 900) {
+			if (scroll > 500) {
 				jQuery("button.scroltop").fadeIn(1000);
 			} else {
 				jQuery("button.scroltop").fadeOut(1000);

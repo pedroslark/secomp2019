@@ -2094,8 +2094,8 @@ textarea.form-control{
     display: table-cell;
 }
 .input-group-addon {
-    background: #06062b;
-    border-color: #06062b;
+    background: none;
+    border-color: none;
     padding: 6px 14px;
     font-size: 20px;
 }
