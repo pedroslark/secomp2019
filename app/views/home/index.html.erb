@@ -86,9 +86,52 @@
 			<div class="container">
 				<div class="row equal-wraper">
 					<div class="col-lg-6 col-md-5 equal-col dis-tbl m-b30">
-						<div class="dis-tbl-cell">
-							<img src="images/pic1.jpg" alt=""/>
-						</div>
+
+
+						<%= form_for @student , :url => root_path do |form| %>
+
+							<% if @student.errors.any?%>
+	          		<% @student.errors.full_messages.each do |mensagem|%>
+	              	<li><%= mensagem %></li>
+	          		<%end%>
+	        		<%end%>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="ti-user text-primary"></i></span>
+								<%= form.text_field :name, class:"form-control", placeholder: "Nome Completo*"%>
+							</div><br>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="ti-email text-primary"></i></span>
+								<%= form.text_field :email, class:"form-control", placeholder: "Email Válido*"%>
+							</div><br>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class=" text-primary"></i></span>
+								<%= form.text_field :institution, class:"form-control", placeholder: "Instituição de Ensino"%>
+							</div><br>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="ti-book text-primary"></i></span>
+								<%= form.text_field :course, class:"form-control", placeholder: "Curso"%>
+							</div><br>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="ti-id-badge text-primary"></i></span>
+								<%= form.text_field :registration, class:"form-control", placeholder: "Código de Matrícula"%>
+							</div><br>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="ti-mobile text-primary"></i></span>
+								<%= form.text_field :phone, class:"form-control", placeholder: "Telefone"%>
+							</div><br>
+
+							<div class="">
+								<%= form.submit "Inscrever-se", class:"site-button radius-xl" %>
+							</div>
+
+						<%end%>
+
 					</div>
 					<div class="col-lg-6 col-md-7 equal-col dis-tbl">
 						<div class="dis-tbl-cell p-l40">

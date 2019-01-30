@@ -2057,10 +2057,10 @@ label {
     margin-bottom: 25px;
 }
 .form-control {
-    border-color: #e1e6eb;
+    border-color: #00ffff;
     box-shadow: none;
     height: 40px;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 20px;
     padding: 9px 12px;
 }
@@ -2094,10 +2094,10 @@ textarea.form-control{
     display: table-cell;
 }
 .input-group-addon {
-    background: #fff;
-    border-color: #e1e1e1;
+    background: #06062b;
+    border-color: #06062b;
     padding: 6px 14px;
-    font-size: 16px;
+    font-size: 20px;
 }
 .input-group-addon.font-size-20 {
     font-size: 20px;

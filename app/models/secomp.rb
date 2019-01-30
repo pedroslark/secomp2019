@@ -1,0 +1,2 @@
+class Secomp < ApplicationRecord
+end
