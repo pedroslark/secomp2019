@@ -242,6 +242,16 @@ h6 {
     color: #232323;
     font-family: "Montserrat",sans-serif;
 }
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    color: #00ffff;
+}
+
 h1 a,
 h2 a,
 h3 a,
@@ -8596,8 +8606,9 @@ ul[class*="list-"]{
 /* Blog carousel */
 .ow-post-info {
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ebebeb;
+    background-color: #06062b;
+    border: 1px solid #cbcbcb;
+    color: #fff;
 }
 .ow-post-title .post-title {
     margin: 0 0 10px;
