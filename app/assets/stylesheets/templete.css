@@ -216,14 +216,12 @@ h6 {
 	line-height:28px;
 }
 .site-button{
-	padding:13px 30px;
-	background: #00ffff; /* Old browsers */
-	background: -moz-linear-gradient(left, #00ffff 100%, #00ffff 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #00ffff 100%, #00ffff 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #00ffff 100%, #00ffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffff', endColorstr='#00ffff',GradientType=1 );
+  border-radius:30px;
+	border-width:2px;
+	border-color:#06062b;
+	background-color:transparent;
 	transition:all 0.5s;
-	font-size:16px;
+	color:#06062b;
 }
 .site-button:hover{
 	background: #5848fb; /* Old browsers */

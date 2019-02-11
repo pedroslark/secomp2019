@@ -123,10 +123,6 @@ $(document).ready(function() {
 
 	manageParticle('about-us');
 
-	manageParticle('mobile-download');
-
-	manageParticle('testimonial');
-
 	manageParticle('footer');
 
 	$('.raindrop').raindrops(
