@@ -1296,6 +1296,9 @@ dl dd {
 .bg-orange {
     background-color: #ef9800;
 }
+.bg-dark-blue {
+    background-color: #06062b;
+}
 /* bg transperent */
 .bg-tpw1{
 	background-color:rgba(255,255,255,0.1)

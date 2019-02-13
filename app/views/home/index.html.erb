@@ -47,9 +47,9 @@
 												<li><%= link_to 'A Semana' ,"#about-us", class: "nav-link scroll"%></li>
 												<li><%= link_to 'Palestras' ,"#lectures", class: "nav-link scroll"%></li>
 												<li><%= link_to 'Cursos' ,"#courses", class: "nav-link scroll"%></li>
-												<li><%= link_to 'Camisetas' ,"#tshirts", class: "nav-link scroll"%></li>
 												<li><%= link_to 'Simpósio' ,"#simposio", class: "nav-link scroll"%></li>
-												<li><%= link_to 'Extra' ,"#footer", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Camisetas' ,"#tshirts", class: "nav-link scroll"%></li>
+												<li><%= link_to 'Realização' ,"#footer", class: "nav-link scroll"%></li>
 											</ul>
 										</div>
                 </div>
@@ -194,7 +194,7 @@
 							</ul>
 
 							<p>Estas atividades são organizadas pelo Programa de Educação
-							Tutorial (PET) e pela Acens, Empresa Júnior da Computação.</p>
+							Tutorial (PET).</p>
 
 						</div>
 					</div>
@@ -431,7 +431,22 @@
 		</div>
 		<!-- Pricing Table END -->
 
-		<!-- App Screenshots -->
+		<!-- Simpósio -->
+		<div class="section-full content-inner bg-img-fix overlay-primary-dark text-white" id="simposio" style="background-image: url(images/background/bg2.jpg);">
+			<div class="container">
+				<div class="section-head text-black text-center m-t30">
+					<h2 class="h2 text-uppercase">Submeter Trabalho</h2>
+					<div class="dlab-separator bg-white"></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+
+				<%= render partial: "simposio" %>
+
+			</div>
+		</div>
+		<!-- Simpósio END -->
+
+		<!-- T-Shirts -->
 		<div class="section-full content-inner app-gallery bg-white owl-btn-center-lr owl-nav-lr raindrop" id="tshirts">
 			<div class="container">
 				<div class="section-head text-center">
@@ -462,105 +477,78 @@
 				</div>
 			</div>
 		</div>
-		<!-- App Screenshots END -->
-
-
-		<!-- Simpósio -->
-		<div class="section-full content-inner bg-img-fix overlay-primary-dark text-white" id="simposio" style="background-image: url(images/background/bg2.jpg);">
-			<div class="container">
-				<div class="section-head text-black text-center m-t30">
-					<h2 class="h2 text-uppercase">Submeter Trabalho</h2>
-					<div class="dlab-separator bg-white"></div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-
-				<div class="max-w600 m-auto m-t30 subscribe-form">
-					<form role="search" method="post">
-						<div class="input-group">
-							<input name="text" class="form-control" placeholder="Título" type="text"/>
-						</div><br>
-
-						<div class="input-group">
-							<input name="text" class="form-control" placeholder="Autores" type="text"/>
-						</div><br>
-
-						<div class="input-group">
-							<input name="text" class="form-control" placeholder="Professor Orientador" type="text"/>
-						</div><br>
-
-						<div class="input-group">
-							<input name="text" class="form-control" placeholder="Apresentador 1" type="text"/>
-							<input name="text" class="form-control" placeholder="Apresentador 2" type="text"/>
-						</div><br>
-
-						<div class=""> <a href="#" class="site-button radius-xl full-width">Enviar!</a> </div>
-
-					</form>
-				</div>
-
-			</div>
-		</div>
-		<!-- Simpósio END -->
+		<!-- T-Shirts END -->
 
 	</div>
 
 	<!-- Footer -->
-    <footer class="site-footer trans-footer bg-img-fix bg-img-fix" id="footer" style="background-image:url(images/background/bg7.jpg); background-size:cover; background-position:bottom; ">
-		<div class="moving-bg"></div>
+    <footer class="trans-footer bg-dark-blue" id="footer" >
+			<div class="moving-bg"></div>
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 text-center m-b30">
-                        <h2 class="text-white font-weight-300">Subscribe To Our Newsletter</h2>
-						<p class="max-w600 m-auto p-b20 text-white font-15">If you have any questions, you can contact with us so that we can give you a satisfying answer. Subscribe to our newsletter to get our latest products, news and events.</p>
-						<div class="max-w600 m-auto m-t30 subscribe-form">
-							<form role="search" method="post">
-								<div class="input-group">
-									<input name="text" class="form-control" placeholder="Your Email Id" type="text"/>
-									<span class="input-group-btn">
-										<button type="submit" class="site-button radius-xl">Subscribe Now</button>
-									</span>
-								</div>
-							</form>
-						</div>
+
+                    <div class="col-lg-6 text-center m-b30">
+											<h4>Realização</h4>
+
+											<div class="row">
+												<div class="col-lg-6 text-center m-b30">
+													<img src="images/logos/uece.png" alt="Universidade Estadual do Ceará"/>
+												</div>
+
+												<div class="col-lg-5 text-center m-b30">
+													<img src="images/logos/pet.png" alt="Pet Computação UECE"/>
+
+													<ul class="list-inline">
+														<li><a target="_blank "href="https://www.instagram.com/acensjr/" class=""><i class="ti-instagram"></i></a></li>
+														<li><a target="_blank "href="https://www.facebook.com/acensjunior" class=""><i class="fa fa-facebook"></i></a></li>
+													</ul>
+												</div>
+											</div>
+
                     </div>
+
+										<div class="col-lg-6 text-center m-b30">
+											<h4>Apoio</h4>
+
+											<div class="row">
+												<div class="col-lg-6 text-center m-b30">
+													<img src="images/logos/acens.png" alt="Acens Empresa Júnior"/>
+												</div>
+
+												<div class="col-lg-6 text-center m-b30">
+													<img src="images/logos/cryptumlab.png" alt="Cryptumlab"/>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-lg-6 text-center m-b30">
+													<img src="images/logos/prae.png" alt="PRAE"/>
+												</div>
+
+												<div class="col-lg-6 text-center m-b30">
+													<img src="images/logos/gracom.png" alt="Gracom"/>
+												</div>
+											</div>
+
+                    </div>
+
+
                 </div>
+
+								<div class="row">
+									<div class="col-lg-12 m-t20 text-center">
+										<ul class="list-inline">
+											© Desenvolvido por: <a target="_blank" href="http://acensjr.com">Acens</a> |
+											<li><a target="_blank "href="https://www.instagram.com/acensjr/" class=""><i class="ti-instagram"></i></a></li>
+											<li><a target="_blank "href="https://www.facebook.com/acensjunior" class=""><i class="fa fa-facebook"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
             </div>
         </div>
-        <!-- footer bottom part -->
-        <div class="footer-bottom text-center">
-            <div class="container p-tb10">
-				<div class="row">
-                    <div class="col-lg-12 col-sm-12 m-b30">
-						<img src="images/logo-white.png" alt="" width="120">
-					</div>
-				</div>
-                <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-						<div class="widget-link ">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="../about-1.html">About</a></li>
-								<li><a href="../help-desk.html">Help Desk</a></li>
-								<li><a href="../privacy-policy.html">Privacy Policy</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 m-t20">
-						<ul class="list-inline">
-							<li><a href="#" class="site-button circle-sm"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" class="site-button circle-sm"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#" class="site-button circle-sm"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#" class="site-button circle-sm"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#" class="site-button circle-sm"><i class="fa fa-twitter"></i></a></li>
-						</ul>
-					</div>
-				</div>
-            </div>
-        </div>
-    </footer>
+
     <!-- Footer END-->
     <!-- scroll top button -->
     <button class="scroltop fa fa-chevron-up" ></button>

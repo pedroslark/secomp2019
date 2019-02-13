@@ -231,6 +231,7 @@ h6 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06062b', endColorstr='#06062b',GradientType=1 );
 	transition:all 0.5s;
 }
+
 .radius-xl.outline{
 	border-radius:30px;
 	border-width:2px;
@@ -533,7 +534,7 @@ h6 {
 }
 
 .trans-footer .footer-top{
-	padding:100px 0 50px 0;
+	padding:100px 0 0 0;
 }
 .trans-footer .footer-top,
 .trans-footer .footer-bottom{
