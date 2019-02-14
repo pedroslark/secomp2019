@@ -99,17 +99,21 @@
 
 						<%= form_for @student , :url => root_path do |form| %>
 
-							<% if @student.errors.any?%>
-	          		<% @student.errors.full_messages.each do |mensagem|%>
-	              	<li><%= mensagem %></li>
-	          		<%end%>
-	        		<%end%>
-
 							<div class='container'>
 								<div class='window'>
 									<div class='overlay'></div>
 									<div class="moving-bg"></div>
 									<div class='content'>
+
+										<div class="text-center text-danger">
+											<br>
+											<% if @student.errors.any?%>
+												<% @student.errors.full_messages.each do |mensagem|%>
+													<li><%= mensagem %></li>
+												<%end%>
+											<%end%>
+										</div>
+
 										<div class='welcome'>Inscreva-se</div>
 										<div class='input-fields'>
 
@@ -140,6 +144,7 @@
 											<div class="">
 												<br><%= form.submit "Confirmar", class:"site-button outline radius-xl full-width" %><br><br><br><br>
 											</div>
+
 										</div>
 									</div>
 								</div>
@@ -499,11 +504,6 @@
 
 												<div class="col-lg-5 text-center m-b30">
 													<img src="images/logos/pet.png" alt="Pet Computação UECE"/>
-
-													<ul class="list-inline">
-														<li><a target="_blank "href="https://www.instagram.com/acensjr/" class=""><i class="ti-instagram"></i></a></li>
-														<li><a target="_blank "href="https://www.facebook.com/acensjunior" class=""><i class="fa fa-facebook"></i></a></li>
-													</ul>
 												</div>
 											</div>
 
