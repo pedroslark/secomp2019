@@ -24,7 +24,7 @@ class HomeController < ApplicationController
             :phone,
             :secomp_id
         )
-    end
+  end
 
 
 end

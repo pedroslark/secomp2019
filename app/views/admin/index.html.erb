@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="Event website." />
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+	<!-- PAGE TITLE HERE -->
+	<title>Secomp 2019</title>
+
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- STYLESHEETS -->
+
+</head>
+<body>
+  <!-- The sidebar -->
+  <div class="sidebar">
+		<a><img src="logo2.png" alt=""></a>
+    <a href="#attendances"><i class="fa fa-check-square-o"></i> Presenças</a>
+    <a class="active" href="#students"><i class="fa fa-user"></i> Alunos</a>
+    <a href="#events"><i class="fa fa-calendar"></i> Eventos</a>
+    <a href="#secomps"><i class="fa fa-bookmark"></i> Secomps</a>
+  </div>
+
+
+  <!-- Page content -->
+	<div class="adminhome">
+	  <div class="content">
+	    <div class="container">
+				<div class="admintable">
+					<div class="container">
+
+						<br><div class="col-md-6">
+							<h2 class="h2">Alunos</h2>
+							<div class="dlab-separator bg-primary"></div>
+						</div>
+
+						<div class="col-md-6">
+							<!-- Filter -->
+						</div>
+
+						<div class="table-responsive">
+							<table class="table table-sm table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Nome</th>
+										<th scope="col">Email</th>
+										<th scope="col">Instituição</th>
+										<th scope="col">Curso</th>
+										<th scope="col">Matrícula</th>
+										<th scope="col">Telefone</th>
+										<th scope="col">Editar</th>
+										<th scope="col">Deletar</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% @students.each do |student| %>
+									<tr>
+										<td><%= student.name %></td>
+										<td><%= student.email %></td>
+										<td><%= student.institution %></td>
+										<td><%= student.course %></td>
+										<td><%= student.registration %></td>
+										<td><%= student.phone %></td>
+										<td></td>
+										<td></td>
+
+
+									</tr>
+									<%end%>
+								</tbody>
+							</table>
+						</div>
+
+
+					</div>
+		    </div>
+			</div>
+	  </div>
+	</div>
+</body>
