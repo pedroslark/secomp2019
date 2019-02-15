@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+  before_action :authenticate_user!
   def index
     @student = Student.new
     @students = Student.order("name ASC").all
