@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Secomp.create!(name: 'secomp2019')
+
+User.create!(email: 'admin@example.com', password:'password') unless User.find_by_email("admin@example.com")

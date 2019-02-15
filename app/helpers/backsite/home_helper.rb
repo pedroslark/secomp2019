@@ -1,0 +1,2 @@
+module Backsite::HomeHelper
+end

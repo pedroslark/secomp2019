@@ -5,12 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
+  	<!-- FAVICONS ICON -->
+  	<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
-  <body>
-    <%= yield %>    
+  <body id="bg">
+    <%= yield %>
   </body>
 </html>
