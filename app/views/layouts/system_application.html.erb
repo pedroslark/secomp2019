@@ -22,7 +22,19 @@
         <a href="#events"><i class="fa fa-calendar"></i> Eventos</a>
         <a href="#secomps"><i class="fa fa-bookmark"></i> Secomps</a>
       </div>
-      
+
+
+      <div class="adminnav">
+        <div class="content">
+          <ul class="text-right">
+            <br>
+            <a><b>Usuário:</b> <%= current_user.email %></a>
+            <a class="btn site-button" <%= link_to "Sair", destroy_user_session_path, method: :delete %></a>
+          </ul>
+        </div>
+      </div>
+
+
     <%= yield %>
   </body>
 </html>

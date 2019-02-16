@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => {
-    sessions: 'users/sessions'
-  }, :skip => [:registrations]
+  devise_for :users, :skip => [:registrations]
 
   # backsite
   post "/"  => "backsite/home#create"

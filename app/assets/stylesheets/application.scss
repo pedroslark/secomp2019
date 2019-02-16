@@ -62,7 +62,7 @@
 div.content2 {
   margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;
+  height: 500px;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -89,6 +89,12 @@ div.content2 {
 }
 
 .admintable {
+  margin-top: 3em;
+  background-color: #fff;
+  box-shadow: 0px 0px 1em #06062b;
+}
+
+.adminnav {
   background-color: #fff;
   box-shadow: 0px 0px 1em #06062b;
 }
