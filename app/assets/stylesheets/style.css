@@ -6369,6 +6369,11 @@ a,
     border-color: #06062b;
     color: #ffffff;
 }
+.btn-info:hover {
+    background-color: #00ffff;
+    border-color: #00ffff;
+    color: #ffffff;
+}
 .btn-danger {
     background-color: #d9534f;
     border-color: #d9534f;
@@ -6407,8 +6412,8 @@ a,
 .btn-outline-info {
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
-    border-color: #5bc0de;
-    color: #5bc0de;
+    border-color: #06062b;
+    color: #06062b;
 }
 .btn-outline-warning {
     background-color: rgba(0, 0, 0, 0);
@@ -6433,9 +6438,9 @@ a,
     color: hsl(0, 0%, 100%);
 }
 .btn-outline-info:hover {
-    background-color: hsl(194, 66%, 61%);
-    border-color: hsl(194, 66%, 61%);
-    color: hsl(0, 0%, 100%);
+    background-color: #00ffff;
+    border-color: #00ffff;
+    color: #fff;
 }
 .btn-outline-warning:hover {
     background-color: hsl(35, 84%, 62%);

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get "/admin" => "backsystem/home#index"
   get "/admin/students" => "backsystem/students#index"
   get "/admin/events" => "backsystem/events#index"
+  get "/admin/secomps" => "backsystem/secomps#index"
+  
+  resources :secomps
   resources :students
   resources :events
 
