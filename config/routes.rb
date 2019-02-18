@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # backsystem
   get "/admin" => "backsystem/home#index"
+  get "/admin/students" => "backsystem/students#index"
   get "/admin/events" => "backsystem/events#index"
   resources :students
   resources :events
