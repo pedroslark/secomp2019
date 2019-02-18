@@ -29,7 +29,7 @@
           <ul class="text-right">
             <br>
             <a><b>Usuário:</b> <%= current_user.email %></a>
-            <a class="btn site-button" <%= link_to "Sair", destroy_user_session_path, method: :delete %></a>
+            <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete %>
           </ul>
         </div>
       </div>

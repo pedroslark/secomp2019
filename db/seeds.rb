@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Secomp.create!(name: 'secomp2019')
+Secomp.create!(name: 'secomp2019') unless Secomp.find_by_name("secomp2019")
 
 User.create!(email: 'admin@example.com', password:'password') unless User.find_by_email("admin@example.com")
