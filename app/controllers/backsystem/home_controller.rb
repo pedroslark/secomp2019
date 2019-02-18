@@ -1,8 +1,15 @@
 class Backsystem::HomeController < BacksystemController
-  
+
   def index
     @student = Student.new
     @students = Student.order("name ASC").all
+  end
+
+  def destroy
+    @student = Student.find(params[:id])
+    @student.destroy
+
+    redirect_to admin_path
   end
 
   # def create

@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   # backsystem
   get "/admin" => "backsystem/home#index"
+  resources :students
 
 end
