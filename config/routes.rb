@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :skip => [:registrations]
+  devise_for :users
 
   # backsite
   post "/"  => "backsite/home#create"
@@ -8,6 +8,5 @@ Rails.application.routes.draw do
 
   # backsystem
   get "/admin" => "backsystem/home#index"
-
 
 end
