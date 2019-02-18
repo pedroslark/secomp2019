@@ -1,0 +1,51 @@
+
+
+
+
+  <!-- Page content -->
+
+	  <div class="content2">
+	    <div class="container">
+				<div class="admintable">
+					<div class="container">
+
+						<br><div class="col-md-6">
+							<h2 class="h2">Eventos</h2>
+							<div class="dlab-separator bg-primary"></div>
+						</div>
+
+						<div class="col-md-6">
+							<!-- Filter -->
+						</div>
+
+						<div class="table-responsive">
+							<table class="table table-sm table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Nome</th>
+										<th scope="col">Editar</th>
+										<th scope="col">Deletar</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% @events.each do |event| %>
+									<tr>
+										<td><%= event.name %></td>
+
+										<td><%= button_to event_url(event), class: "btn btn-info" do %>
+                    <i class="ti-pencil"></i><% end %></td>
+
+										<td><%= button_to event_url(event), method: :delete, class: "btn btn-danger",
+                  data: {confirm: "Tem certeza que deseja remover o evento #{event.name}?"} do%>
+                  <i class="ti-trash"></i><% end %></td>
+									</tr>
+									<%end%>
+								</tbody>
+							</table>
+						</div>
+
+
+					</div>
+		    </div>
+			</div>
+	  </div>
