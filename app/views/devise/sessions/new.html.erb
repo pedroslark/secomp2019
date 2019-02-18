@@ -1,0 +1,26 @@
+  <br><br><br><br>
+  <div class='windowadmin'>
+    <div class='overlayadmin'></div>
+    <div class="moving-bg"></div>
+    <div class='content'>
+      <div class='welcome'>Login</div>
+      <div class='subtitle'>Administração Secomp 2019.</div>
+      <div class='input-fields'>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input-line full-width", placeholder: "Email" %>
+          </div>
+
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "current-password", class:"input-line full-width", placeholder: "Senha" %>
+          </div><br>
+
+          <div class="actions">
+            <%= f.submit "Entrar", class:"site-button outline full-width" %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
