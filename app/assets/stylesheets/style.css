@@ -2403,7 +2403,7 @@ input[type=radio]:checked + label:before {
 .loading-pic {
     width: 70px;
     height: 70px;
-    background: url(inc/images/loading.GIF) center no-repeat;
+    background: url(inc/images/loading.gif) center no-repeat;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -11801,7 +11801,6 @@ ol.commentlist li .star-rating {
     z-index: 999999999;
     background-image: url(../images/loading.svg);
     background-repeat: no-repeat;
-    background-size: 60px;
     background-position: center;
 }
 /* ------------------------------------------------

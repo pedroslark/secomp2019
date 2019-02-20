@@ -8,10 +8,11 @@ class Backsite::HomeController < BacksiteController
     @student = Student.new(student_params)
     @student.secomp_id = 1
 
-   if @student.save
-        redirect_to root_path, notice: 'Cadastrado com sucesso'
+  if @student.save
+    StudentMailer.registration_confirmation(@student).deliver_now
+    redirect_to root_path, notice: 'Cadastrado com sucesso'
     else
-        render :index
+      render :index
     end
   end
 
@@ -26,7 +27,6 @@ class Backsite::HomeController < BacksiteController
             :secomp_id
         )
   end
-
 
 
 end
