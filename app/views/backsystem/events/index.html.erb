@@ -1,9 +1,4 @@
 
-
-
-
-  <!-- Page content -->
-
 	  <div class="content2">
 	    <div class="container">
 				<div class="admintable">
@@ -13,6 +8,8 @@
 							<h2 class="h2">Eventos</h2>
 							<div class="dlab-separator bg-primary"></div>
 						</div>
+
+						<%= button_to "Criar", new_backsystem_event_path, method: :get, class: "btn btn-sucess" %>
 
 						<div class="col-md-6">
 							<!-- Filter -->
@@ -32,10 +29,10 @@
 									<tr>
 										<td><%= event.name %></td>
 
-										<td><%= button_to event_url(event), class: "btn btn-info" do %>
+										<td><%= button_to edit_backsystem_event_path(event), method: :get, class: "btn btn-info" do %>
                     <i class="ti-pencil"></i><% end %></td>
 
-										<td><%= button_to event_url(event), method: :delete, class: "btn btn-danger",
+										<td><%= button_to backsystem_event_path(event), method: :delete, class: "btn btn-danger",
                   data: {confirm: "Tem certeza que deseja remover o evento #{event.name}?"} do%>
                   <i class="ti-trash"></i><% end %></td>
 									</tr>

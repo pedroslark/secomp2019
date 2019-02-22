@@ -2,18 +2,17 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  # backsite
   post "/"  => "backsite/home#create"
   root 'backsite/home#index'
 
-  # backsystem
   get "/admin" => "backsystem/home#index"
   get "/admin/students" => "backsystem/students#index"
-  get "/admin/events" => "backsystem/events#index"
-  get "/admin/secomps" => "backsystem/secomps#index"
   
-  resources :secomps
-  resources :students
-  resources :events
+  namespace :backsystem do
+    resources :events
+    resources :secomps, :except => [:show]
+    get "/" => "home#index"
+    get "/students" => "students#index"
+  end
 
 end

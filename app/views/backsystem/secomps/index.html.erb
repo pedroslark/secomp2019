@@ -31,13 +31,15 @@
 									<% @secomps.each do |secomp| %>
 									<tr>
 										<td><%= secomp.name %></td>
+										<td><%= button_to edit_backsystem_secomp_path(secomp), method: :get, class: "btn btn-info" do %>
+                    	<i class="ti-pencil"></i><% end %></td>
 
-										<td><%= button_to secomp_url(secomp), class: "btn btn-info" do %>
-                    <i class="ti-pencil"></i><% end %></td>
-
-										<td><%= button_to secomp_url(secomp), method: :delete, class: "btn btn-danger",
-                  data: {confirm: "Tem certeza que deseja remover #{secomp.name}?"} do%>
-                  <i class="ti-trash"></i><% end %></td>
+										<td>
+											<%= button_to backsystem_secomp_path(secomp), method: :delete, class: "btn btn-danger",
+											data: {confirm: "Tem certeza que deseja remover #{secomp.name}?"} do%>
+												<i class="ti-trash"></i>
+											<% end %>
+										</td>
 									</tr>
 									<%end%>
 								</tbody>
