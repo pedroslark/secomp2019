@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.2'
 
 gem 'devise'
 
-gem 'sqlite3', '~> 1.3.6'
+gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'puma', '~> 3.11'
 
@@ -56,7 +56,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-group :production do
-  gem 'pg'
-end
