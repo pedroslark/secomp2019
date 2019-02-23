@@ -8,7 +8,7 @@ class Backsystem::StudentsController < BacksystemController
     @student = Student.find(params[:id])
     @student.destroy
 
-    redirect_to admin_path
+    redirect_to backsystem_students_path
   end
 
   def create

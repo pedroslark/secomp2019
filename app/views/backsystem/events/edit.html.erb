@@ -6,7 +6,7 @@
         <br><div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="h2">Presenças</h2>
+              <h2 class="h2"><%= @event.name %></h2>
             </div>
           </div>
           <div class="dlab-separator bg-primary"></div>
@@ -14,15 +14,51 @@
 
         <%= form_for [:backsystem, @event]  do |f| %>
 
-          <%= f.collection_check_boxes :student_ids, Student.all, :id, :name %>
-
           <div class="row">
-            <%= f.submit "Confirmar", class:"btn btn-success" %>
+
+            <div class="field col-md-3">
+              <%= f.text_field :name, autofocus: true, class:"form-control", placeholder: "Nome" %>
+            </div>
+            <div class="actions">
+                <%= f.submit "Alterar Título", class:"btn btn-info" %>
+            </div><br><br><br>
 
         <%end%>
-
-            <%= button_to "Voltar", backsystem_events_path, method: :get, class: "btn btn-danger" %>
           </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content2">
+  <div class="container">
+    <div class="admintable">
+      <div class="container">
+
+        <br><div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="h2">Presenças</h2>
+            </div>
+          </div>
+          <div class="dlab-separator bg-primary"></div>
+        </div>
+
+
+        <%= form_for [:backsystem, @event]  do |f| %>
+
+          <%= f.collection_check_boxes :student_ids, Student.all, :id, :name %>
+
+          <br><div class="row">
+            <div class="col-md-1">
+              <%= f.submit "Salvar", class:"btn btn-success" %>
+            </div>
+          <%end%>
+            <div class="col-md-1">
+              <%= button_to "Voltar", backsystem_events_path, method: :get, class: "btn btn-danger" %>
+            </div>
+          </div><br>
 
       </div>
     </div>

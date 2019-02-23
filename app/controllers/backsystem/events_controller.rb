@@ -26,6 +26,7 @@ class Backsystem::EventsController < BacksystemController
 
   # Revisar
   def edit
+    @students = Student.all
   end
 
   # Revisar
