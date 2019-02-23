@@ -1,9 +1,15 @@
 <%= form_for [:backsystem, @event]  do |f| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="row">
 
-    <%= f.submit "Criar" %>
+    <div class="field col-md-3">
+      <%= f.text_field :name, autofocus: true, class:"form-control", placeholder: "Nome" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Criar", class:"btn btn-success" %>
+      <%= button_to "Voltar", backsystem_url, method: :get, class: "btn btn-danger" %>
+    </div><br><br>
 
+  </div>
 
 <%end%>

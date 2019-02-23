@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   get "/admin" => "backsystem/home#index"
   get "/admin/students" => "backsystem/students#index"
-  
+
   namespace :backsystem do
+    resources :students
     resources :events
     resources :secomps, :except => [:show]
     get "/" => "home#index"

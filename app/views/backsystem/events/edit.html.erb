@@ -1,0 +1,8 @@
+<%= form_for [:backsystem, @event]  do |f| %>
+
+
+
+      <%= f.submit "Confirmar", class:"btn btn-success" %>
+      <%= button_to "Voltar", backsystem_url, method: :get, class: "btn btn-danger" %>
+
+<%end%>

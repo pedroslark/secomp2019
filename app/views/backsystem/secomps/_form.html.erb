@@ -1,1 +1,14 @@
-Aqui é pra ter o formulário
+<%= form_for [:backsystem, @secomp]  do |f| %>
+
+  <div class="row">
+
+    <div class="field col-md-3">
+      <%= f.text_field :name, autofocus: true, class:"form-control", placeholder: "Nome" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Criar", class:"btn btn-success" %>
+    </div><br><br>
+
+  </div>
+
+<%end%>
