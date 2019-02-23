@@ -12,16 +12,16 @@ class Backsystem::HomeController < BacksystemController
     redirect_to admin_path
   end
 
-  # def create
-  #   @student = Student.new(student_params)
-  #   @student.secomp_id = 1
-  #
-  #  if @student.save
-  #       redirect_to root_path, notice: 'Cadastrado com sucesso'
-  #   else
-  #       render :index
-  #   end
-  # end
+  def create
+    @student = Student.new(student_params)
+    @student.secomp_id = 1
+
+   if @student.save
+        redirect_to root_path, notice: 'Cadastrado com sucesso'
+    else
+        render :index
+    end
+  end
 
   def student_params
         params.require(:student).permit(

@@ -12,12 +12,22 @@
 
 ActiveRecord::Schema.define(version: 2019_02_15_004113) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.integer "secomp_id"
+    t.bigint "secomp_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["secomp_id"], name: "index_events_on_secomp_id"
+  end
+
+  create_table "events_students", id: false, force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_events_students_on_event_id"
+    t.index ["student_id"], name: "index_events_students_on_student_id"
   end
 
   create_table "secomps", force: :cascade do |t|
@@ -33,17 +43,10 @@ ActiveRecord::Schema.define(version: 2019_02_15_004113) do
     t.string "course"
     t.string "registration"
     t.string "phone"
-    t.integer "secomp_id"
+    t.bigint "secomp_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["secomp_id"], name: "index_students_on_secomp_id"
-  end
-
-  create_table "students_events", id: false, force: :cascade do |t|
-    t.integer "student_id"
-    t.integer "event_id"
-    t.index ["event_id"], name: "index_students_events_on_event_id"
-    t.index ["student_id"], name: "index_students_events_on_student_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,4 +61,6 @@ ActiveRecord::Schema.define(version: 2019_02_15_004113) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "secomps"
+  add_foreign_key "students", "secomps"
 end

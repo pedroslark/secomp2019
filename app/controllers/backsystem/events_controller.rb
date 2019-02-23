@@ -1,6 +1,6 @@
 class Backsystem::EventsController < BacksystemController
 
-  before_action :set_event, :only => [:edit, :destroy]
+  before_action :set_event, :only => [:edit, :update, :destroy]
 
   #  OK
   def index
@@ -11,7 +11,7 @@ class Backsystem::EventsController < BacksystemController
   def new
     @event = Event.new
   end
-  
+
   # Revisar FK
   def create
     @event = Event.new(event_params)
@@ -36,27 +36,28 @@ class Backsystem::EventsController < BacksystemController
       render :edit
     end
   end
-    
+
   # Revisar FK
   def destroy
     @event.destroy
     redirect_to backsystem_events_path
   end
- 
+
 
 
 
   private
-  
+
     def event_params
           params.require(:event).permit(
               :name,
-              :secomp_id
+              :secomp_id,
+              student_ids: []
           )
     end
 
     def set_event
       @event = Event.find(params[:id])
     end
-    
+
 end
