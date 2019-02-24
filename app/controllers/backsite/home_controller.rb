@@ -11,7 +11,7 @@ class Backsite::HomeController < BacksiteController
     @student.secomp_id = 1
 
     if @student.save
-      StudentMailer.registration_confirmation(@student).deliver_now
+      # StudentMailer.registration_confirmation(@student).deliver_now
       redirect_to root_path, notice: 'Cadastrado com sucesso'
     else
       render :index, alert: "Falha no cadastro"
