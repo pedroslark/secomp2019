@@ -21,6 +21,9 @@ class Backsystem::SecompsController < BacksystemController
     end
   end
   
+  def new
+    @secomp = Secomp.new
+  end
   
 
   def create
