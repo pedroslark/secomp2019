@@ -40,7 +40,7 @@ Rails.application.configure do
 
   # Gmail SMTP server setup
   ActionMailer::Base.smtp_settings = {
-     :address => 'smtp.sendgrid.net',
+    :address => 'smtp.sendgrid.net',
     :enable_starttls_auto => true,
     :port => 587,
     :authentication => :plain,
