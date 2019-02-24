@@ -26,7 +26,7 @@ class Backsystem::SecompsController < BacksystemController
   def create
     @secomp = Secomp.new(secomp_params)
 
-   if @secomp.save
+    if @secomp.save
         redirect_to backsystem_secomps_path, notice: 'Secomp criada com sucesso'
     else
         render :index

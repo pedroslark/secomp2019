@@ -2,18 +2,16 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  # Subscribe Students => Home page
   post "/"  => "backsite/home#create"
   root 'backsite/home#index'
-
-  get "/admin" => "backsystem/home#index"
-  get "/admin/students" => "backsystem/students#index"
-
-  namespace :backsystem do
+  
+  # System => Authenticate
+  namespace :backsystem, path: "admin" do
     resources :students
     resources :events
     resources :secomps, :except => [:show]
-    get "/" => "home#index"
-    get "/students" => "students#index"
+    get "/" => "events#index"
   end
 
 end

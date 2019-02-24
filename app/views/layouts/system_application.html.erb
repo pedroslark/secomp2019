@@ -15,23 +15,17 @@
 
   <body>
 
-      <div class="sidebar">
-    		<a><img src="/logo2.png" alt=""></a>
-        <a href="/backsystem/students"><i class="fa fa-user"></i> Alunos</a>
-        <a class="active" href="/backsystem/events"><i class="fa fa-calendar"></i> Eventos</a>
-        <a href="/backsystem/secomps"><i class="fa fa-bookmark"></i> Secomps</a>
-      </div>
+    <%= render partial: "backsystem/partials/side_bar" %>
 
-
-      <div class="adminnav">
-        <div class="content">
-          <ul class="text-right">
-            <br>
-            <a><b>Usuário:</b> <%= current_user.email %></a>
-            <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete %>
-          </ul>
-        </div>
+    <div class="adminnav">
+      <div class="content">
+        <ul class="text-right">
+          <br>
+          <b>Usuário:</b> <%= current_user.email %>
+          <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete %>
+        </ul>
       </div>
+    </div>
 
 
     <%= yield %>
