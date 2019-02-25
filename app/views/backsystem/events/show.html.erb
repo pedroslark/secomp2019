@@ -1,0 +1,55 @@
+
+<div class="content2">
+  <div class="container">
+    <div class="admintable">
+      <div class="container">
+
+        <br><div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="actions">
+                  <div class="row">
+
+                  <%= form_tag(backsystem_event_path(@event), {method: :get, class: "form-inline"}) do %>
+                    <div class="form-group">
+                      &nbsp;<%= label_tag :name_search, "Procurar pelo Nome" %>&nbsp;
+                      <%= text_field_tag  :name_search, "" , class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                      &nbsp;<%= label_tag :email, " ou pelo Email" %>&nbsp;
+                      <%= email_field_tag :email, "", class: "form-control" %>
+                    </div>
+                      <%= submit_tag "Ir", class:"btn btn-success" %>
+                  <% end %>
+     
+                  </div>
+              </div><br><br>
+
+              <h2 class="h2">Presenças :</h2>
+              <h4 class="h4"><%= @event.name %></h4>
+            </div>
+          </div>
+          <div class="dlab-separator bg-primary"></div>
+        </div>
+
+
+        <%= form_for [:backsystem, @event]  do |f| %>
+
+
+          <%= f.collection_check_boxes :student_ids, @students, :id, :name%>
+
+          <br><div class="row">
+            <div class="col-md-1">
+              <%= f.submit "Salvar", class:"btn btn-success" %>
+            </div>
+          <%end%>
+            <div class="col-md-1">
+              <%= button_to "Cancelar", backsystem_events_path, method: :get, class: "btn btn-danger" %>
+            </div>
+          </div><br>
+
+      </div>
+    </div>
+  </div>
+</div>

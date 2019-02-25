@@ -22,7 +22,8 @@
         <ul class="text-right">
           <br>
           <b>Usuário:</b> <%= current_user.email %>
-          <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete %>
+          <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete, data: 
+          {confirm: "Deseja realmente sair ?"} %>
         </ul>
       </div>
     </div>

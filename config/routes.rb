@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   # System => Authenticate
   namespace :backsystem, path: "admin" do
     resources :students
-    resources :events
+    resources :events, :except => [:show]
     resources :secomps, :except => [:show]
     get "/" => "events#index"
+    get "/events/:id" => "events#show",:as => "show" # mark presence event
   end
 
 end

@@ -1,6 +1,6 @@
 class Backsystem::EventsController < BacksystemController
 
-  before_action :set_event, :only => [:edit, :update, :destroy]
+  before_action :set_event, :only => [:edit, :update, :destroy,:show]
 
   #  OK
   def index
@@ -24,9 +24,18 @@ class Backsystem::EventsController < BacksystemController
     end
   end
 
-  # Revisar
   def edit
     @students = Student.all
+  end
+
+  def show
+    if params[:name_search].present? 
+      @students = Student.where(name: params[:name_search]).order(:name)
+    elsif params[:email].present?
+      @students = Student.where(email: params[:email]).order(:name)
+    else
+      @students = Student.all
+    end
   end
 
   # Revisar
