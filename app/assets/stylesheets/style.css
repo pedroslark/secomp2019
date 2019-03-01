@@ -13417,3 +13417,7 @@ ol.commentlist li .star-rating {
 .field_with_errors {
     width:100%;
 }
+
+.course-title {
+	height: 150px;
+}

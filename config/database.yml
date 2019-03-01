@@ -9,10 +9,14 @@ default: &default
 development:
   <<: *default
   database: secomp2019_development
+  username: postgres
+  password: pv159753
 
 test:
   <<: *default
   database: secomp2019_test
+  username: postgres
+  password: pv159753
 
 
 production:
