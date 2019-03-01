@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Panel | Secomp2019 </title>
+    <title> Painel | Secomp2019 </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -22,11 +22,29 @@
         <ul class="text-right">
           <br>
           <b>Usuário:</b> <%= current_user.email %>
-          <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete, data: 
+          <%= link_to "Sair", destroy_user_session_path, class:"btn site-button", method: :delete, data:
           {confirm: "Deseja realmente sair ?"} %>
         </ul>
       </div>
     </div>
+
+
+          <% unless notice.blank?%>
+            <div class="adminnav">
+
+                  <div class="alert alert-success alert-dismissible fade show" style="float:right; width:500px;">
+
+                      <li><strong><%= notice %><strong></li>
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+            </div>
+          <%end%>
+
+
 
 
     <%= yield %>
