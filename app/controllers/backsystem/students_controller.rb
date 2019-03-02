@@ -9,7 +9,7 @@ class Backsystem::StudentsController < BacksystemController
     @student = Student.find(params[:id])
     @student.destroy
 
-    redirect_to backsystem_students_path
+    redirect_to backsystem_students_path, notice: 'Deletado com sucesso'
   end
 
   def create

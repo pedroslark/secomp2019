@@ -50,7 +50,7 @@ class Backsystem::EventsController < BacksystemController
   # Revisar FK
   def destroy
     @event.destroy
-    redirect_to backsystem_events_path
+    redirect_to backsystem_events_path, notice: "Evento deletado com sucesso"
   end
 
 

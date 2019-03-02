@@ -4,11 +4,12 @@ Rails.application.routes.draw do
 
   # Subscribe Students => Home page
   post "/"  => "backsite/home#create"
+  post "/send_simposio" => "backsite/home#send_symposium"
   root 'backsite/home#index'
   
   # System => Authenticate
   namespace :backsystem, path: "admin" do
-    resources :students
+    resources :students, :except => [:new, :create]
     resources :events, :except => [:show]
     resources :secomps, :except => [:show]
     get "/" => "events#index"

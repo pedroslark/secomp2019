@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_004113) do
+ActiveRecord::Schema.define(version: 2019_03_02_030036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,16 @@ ActiveRecord::Schema.define(version: 2019_02_15_004113) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["secomp_id"], name: "index_students_on_secomp_id"
+  end
+
+  create_table "symposia", force: :cascade do |t|
+    t.string "title"
+    t.string "advisor"
+    t.string "presenter_1"
+    t.string "presenter_2"
+    t.string "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

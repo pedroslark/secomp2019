@@ -1,27 +1,31 @@
 <div class="max-w600 m-auto m-t30">
-  <form role="search" method="post">
+    
+    <%= form_for @simposio, :url => "/send_simposio" , :action => "send_symposium" do |form |%>
+    
     <div class="input-group subscribe-form">
-      <input name="text" class="form-control" placeholder="Título" type="text"/>
+        <%= form.text_field :title, class:"form-control", placeholder: "Título do Trabalho"%>
     </div><br>
 
     <div class="input-group subscribe-form">
-      <input name="text" class="form-control" placeholder="Autores" type="text"/>
+      <%= form.text_field :author, class:"form-control", placeholder: "Autores"%>
     </div><br>
 
     <div class="input-group subscribe-form">
-      <input name="text" class="form-control" placeholder="Professor Orientador" type="text"/>
+      <%= form.text_field :advisor, class:"form-control", placeholder: "Professor Orientador"%>
     </div><br>
 
     <div class="input-group subscribe-form">
-      <input name="text" class="form-control" placeholder="Apresentador 1" type="text"/>
-      <input name="text" class="form-control" placeholder="Apresentador 2" type="text"/>
+      <%= form.text_field :presenter_1, class:"form-control", placeholder: "Apresentador 1"%>
+      <%= form.text_field :presenter_2, class:"form-control", placeholder: "Apresentador 2"%>
     </div><br>
 
     <div class="form-group text-right">
-      <input type="file" name="upload" class="site-button input-file text-left full-width form-control" accept="application/pdf"/>
+      <%= form.file_field :file, class:"site-button input-file text-left full-width form-control", placeholder: "Enviar Simposio" %>
     </div>
 
-    <div class=""> <a href="#" class="site-button radius-xl full-width">Enviar!</a> </div>
+    <div class=""> 
+       <%= form.submit "Enviar", class:"site-button radius-xl full-width" %>
+    </div>
 
-  </form>
+  <%end%>
 </div>
