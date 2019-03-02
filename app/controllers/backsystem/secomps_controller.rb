@@ -1,5 +1,5 @@
 class Backsystem::SecompsController < BacksystemController
-  before_action :set_secomp, :only => [:edit, :destroy]
+  before_action :set_secomp, :only => [:edit, :update, :destroy, :show]
 
   def index
     @secomps = Secomp.order("name ASC").all
