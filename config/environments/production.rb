@@ -88,14 +88,15 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
 
-   # Gmail SMTP server setup
-   ActionMailer::Base.smtp_settings = {
-    :address => 'smtp.sendgrid.net',
-    :enable_starttls_auto => true,
-    :port => 587,
-    :authentication => :plain,
-    :user_name => ENV['USER_MAIL'],
-    :password => ENV['PASSWORD_MAIL']
+  # Gmail SMTP server setup
+  ActionMailer::Base.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'uece.br',
+    user_name: ENV["EMAIL_RECEIVE_PET"],
+    password: ENV["EMAIL_PASSWORD_PET"],
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
 

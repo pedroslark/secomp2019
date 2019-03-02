@@ -12,18 +12,19 @@ class Backsite::HomeController < BacksiteController
     @student.secomp_id = 1
 
     if @student.save
-      StudentMailer.registration_confirmation(@student).deliver_now
       redirect_to root_path, notice: 'Cadastrado com sucesso'
     else
       render :index, alert: "Falha no cadastro"
     end
   end
 
+  # POST "/send_simposio" Mailer Simposio
   def send_symposium
     @simposio = Symposium.new(symposium_params)
-    
-    if @simposio.save
-      SimposioSendMailer.send_mailer_symposium(@simposio).deliver_now
+    file = params[:file]
+
+    if @simposio.valid?
+      SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
       redirect_to root_path, notice: "Simpósio enviado com sucesso"
     else
       render root_path, notice: "ERROR"

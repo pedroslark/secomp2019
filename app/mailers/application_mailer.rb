@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'petcomputacao@uece.br'
+  default from: 'pet.computacao@uece.br'
   layout 'mailer'
 end
