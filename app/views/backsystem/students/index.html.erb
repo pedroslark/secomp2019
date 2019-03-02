@@ -11,7 +11,7 @@
 								<div class="col-md-5">
 									<!-- Filter -->
 								</div>
-								
+
 							</div>
 							<div class="dlab-separator bg-primary"></div>
 						</div>
@@ -40,8 +40,11 @@
 										<td><%= student.registration %></td>
 										<td><%= student.phone %></td>
 
-										<td><%= button_to edit_backsystem_student_path(student), class: "btn btn-info" do %>
-                    <i class="ti-pencil"></i><% end %></td>
+										<td>
+											<%= button_to edit_backsystem_student_path(student), method: :get, class: "btn btn-info" do %>
+											<i class="ti-pencil"></i>
+											<% end %>
+									</td>
 
 										<td><%= button_to backsystem_student_path(student), method: :delete, class: "btn btn-danger",
                   data: {confirm: "Tem certeza que deseja remover #{student.name}?"} do%>

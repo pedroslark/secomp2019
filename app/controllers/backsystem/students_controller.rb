@@ -1,5 +1,5 @@
 class Backsystem::StudentsController < BacksystemController
-
+before_action :set_student, :only => [:edit, :update, :destroy, :show]
   def index
     @student = Student.new
     @students = Student.order("name ASC").all
@@ -10,6 +10,14 @@ class Backsystem::StudentsController < BacksystemController
     @student.destroy
 
     redirect_to backsystem_students_path, notice: 'Deletado com sucesso'
+  end
+
+  def update
+    if @Student.update(student_params)
+      redirect_to backsystem_students_path, notice: "Aluno atualizado com Sucesso"
+    else
+      render :edit
+    end
   end
 
   def create
@@ -34,6 +42,10 @@ class Backsystem::StudentsController < BacksystemController
           :phone,
           :secomp_id
       )
+    end
+
+    def set_student
+      @student = Student.find(params[:id])
     end
 
 
