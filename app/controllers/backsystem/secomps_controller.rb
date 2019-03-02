@@ -1,13 +1,13 @@
 class Backsystem::SecompsController < BacksystemController
   before_action :set_secomp, :only => [:edit, :destroy]
-  
+
   def index
     @secomps = Secomp.order("name ASC").all
   end
 
   def destroy
     @secomp.destroy
-    redirect_to backsystem_secomps_path
+    redirect_to backsystem_secomps_path, notice: 'Secomp deletada com sucesso'
   end
 
   def edit
@@ -15,16 +15,16 @@ class Backsystem::SecompsController < BacksystemController
 
   def update
     if @secomp.update(secomp_params)
-      redirect_to backsystem_secomps_path, notice: 'Secomp editada com sucesso'
+      redirect_to backsystem_secomps_path, notice: 'Secomp atualizada com sucesso'
     else
       render :edit
     end
   end
-  
+
   def new
     @secomp = Secomp.new
   end
-  
+
 
   def create
     @secomp = Secomp.new(secomp_params)
@@ -36,7 +36,7 @@ class Backsystem::SecompsController < BacksystemController
     end
   end
 
-  private 
+  private
     def secomp_params
       params.require(:secomp).permit(:name)
     end
@@ -44,7 +44,7 @@ class Backsystem::SecompsController < BacksystemController
     def set_secomp
       @secomp = Secomp.find(params[:id])
     end
-    
+
 
 
 end

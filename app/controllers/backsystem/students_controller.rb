@@ -1,5 +1,5 @@
 class Backsystem::StudentsController < BacksystemController
-  
+
   def index
     @student = Student.new
     @students = Student.order("name ASC").all
@@ -9,7 +9,7 @@ class Backsystem::StudentsController < BacksystemController
     @student = Student.find(params[:id])
     @student.destroy
 
-    redirect_to backsystem_students_path
+    redirect_to backsystem_students_path, notice: 'Aluno deletado com sucesso'
   end
 
   def create
@@ -22,7 +22,7 @@ class Backsystem::StudentsController < BacksystemController
       render :index
     end
   end
-  
+
   private
     def student_params
       params.require(:student).permit(

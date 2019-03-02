@@ -1,11 +1,9 @@
 class SimposioSendMailer < ApplicationMailer
-    
-    def send(simposio)
-        @url = 'https://www.instagram.com/petcomputacao/?hl=pt-br'
 
+    def send(simposio)
         mail(
-            to: @simposio.email, 
-            subject: 'Inscrição SECOMP 2019'
+          to: "petcomputacao@uece.br",
+          subject: "Submissão de Trabalho"
         )
     end
 
