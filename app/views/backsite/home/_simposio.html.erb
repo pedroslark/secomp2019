@@ -57,8 +57,13 @@
         <%= form.file_field :file,
         class:"site-button input-file text-left full-width form-control",
         placeholder: "Enviar Simposio",
-        accept: 'application/pdf' %>
+        accept: 'application/pdf',
+        data: { max_file_size: 50.megabytes } %>
       </div>
+      <ul class="list-inline">
+        Somente PDFs |
+        <li>(Max 50MB)</li>
+			</ul>
 
       <div class=""> 
         <%= form.submit "Enviar", class:"site-button radius-xl full-width" %>
