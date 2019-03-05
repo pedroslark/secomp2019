@@ -1,6 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  ActionMailer::Base.file_settings = { :location => Rails.root.join('tmp/mail') }
   # Code is not reloaded between requests.
   config.cache_classes = true
 

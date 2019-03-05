@@ -21,10 +21,10 @@ class Backsite::HomeController < BacksiteController
   # POST "/send_simposio" Mailer Simposio
   def send_symposium
     @simposio = Symposium.new(symposium_params)
-    file = params[:file]
+    file = params[:symposium][:file]
 
     if @simposio.valid?
-      SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
+      # SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
       redirect_to root_path, notice: "Simpósio enviado com sucesso"
     else
       render root_path, notice: "ERROR"

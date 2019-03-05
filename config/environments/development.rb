@@ -1,5 +1,7 @@
 Rails.application.configure do
 
+  ActionMailer::Base.file_settings = { :location => Rails.root.join('tmp/mail') }
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -7,6 +9,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
@@ -37,7 +40,8 @@ Rails.application.configure do
       user_name: ENV["EMAIL_RECEIVE_PET"],
       password: ENV["EMAIL_PASSWORD_PET"],
       authentication: :plain,
-      enable_starttls_auto: true
+      enable_starttls_auto: true,
+      openssl_verify_mode: 'none'
     }
   config.action_mailer.perform_caching = false
 

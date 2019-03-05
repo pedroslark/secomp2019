@@ -20,7 +20,10 @@
     </div><br>
 
     <div class="form-group text-right">
-      <%= form.file_field :file, class:"site-button input-file text-left full-width form-control", placeholder: "Enviar Simposio" %>
+      <%= form.file_field :file,
+       class:"site-button input-file text-left full-width form-control",
+       placeholder: "Enviar Simposio",
+       accept: 'application/pdf' %>
     </div>
 
     <div class=""> 
