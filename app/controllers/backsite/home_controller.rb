@@ -8,26 +8,31 @@ class Backsite::HomeController < BacksiteController
 
   # POST "/" Subscribe
   def create
+    @simposio = Symposium.new
     @student = Student.new(student_params)
     @student.secomp_id = 1
 
     if @student.save
-      redirect_to root_path, notice: 'Cadastrado com sucesso'
+      redirect_to root_path, notice: 'Cadastrado com sucesso. Descanse em paz Padawan, sua vaga está garantida \o/'
     else
-      render :index, alert: "Falha no cadastro"
+      render :index
     end
   end
 
   # POST "/send_simposio" Mailer Simposio
   def send_symposium
+    @student = Student.new
     @simposio = Symposium.new(symposium_params)
     file = params[:symposium][:file]
 
-    if @simposio.valid?
+    if @simposio.valid? and !file.nil?
       # SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
-      redirect_to root_path, notice: "Simpósio enviado com sucesso"
+      redirect_to root_path, notice: "Simpósio enviado com sucesso. Prepare-se bem Padawan o/"
     else
-      render root_path, notice: "ERROR"
+      if file.nil?
+        flash[:alert] = "PDF do simpósio é obrigatório"
+      end
+      render :index
     end
     
   end

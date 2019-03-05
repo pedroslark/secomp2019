@@ -125,7 +125,7 @@
 									<div class='input-fields '>
 
 
-									<%= form_for @student, :url => {:action => "create" , :anchor => "register"} do |form| %>
+									<%= form_for @student, url: {action: "create" , anchor: "register"} do |form| %>
 
 										<div class="input-group ">
 											<%= form.text_field :name, class:"input-line full-width", placeholder: "Nome Completo*"%>
@@ -145,9 +145,9 @@
 
 										<div class="input-group">
 											<%= form.text_field :registration,
-												:class => "input-line full-width",
-												:placeholder => "Código de Matrícula",
-												:maxlength => 7
+												class: "input-line full-width",
+												placeholder: "Código de Matrícula",
+												maxlength: 7
 											%>
 										</div>
 
