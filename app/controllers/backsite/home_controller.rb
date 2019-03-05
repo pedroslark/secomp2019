@@ -28,7 +28,7 @@ class Backsite::HomeController < BacksiteController
     is_pdf = file.original_filename.include? ".pdf"
 
     if @simposio.valid? and !file.nil? and is_pdf
-      # SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
+      SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_later
       redirect_to root_path, notice: "Simpósio enviado com sucesso. Prepare-se bem Padawan o/"
     else
       if file.nil? or !is_pdf
