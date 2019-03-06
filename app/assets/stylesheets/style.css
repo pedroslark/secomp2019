@@ -13421,3 +13421,7 @@ ol.commentlist li .star-rating {
 .course-title {
 	height: 150px;
 }
+
+.lecture-text {
+  height: 220px
+}
