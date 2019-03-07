@@ -6541,6 +6541,11 @@ a,
     border-radius: 100px;
     -webkit-border-radius: 100px;
 }
+
+.overlap-z {
+  position: absolute;
+  z-index: 99999;
+}
 .radius-md {
     border-radius: 8px;
     -webkit-border-radius: 8px;
