@@ -13,17 +13,9 @@
               <div class="actions">
                   <div class="row">
 
-                  <%= form_tag(backsystem_event_path(@event), {method: :get, class: "form-inline"}) do %>
                     <div class="form-group">
-                      &nbsp;<%= label_tag :name_search, "Filtrar por: Nome" %>&nbsp;
-                      <%= text_field_tag  :name_search, "" , class: "form-control" %>
+                      <input type="text" id="searchName" class="form-control" placeholder="Filtrar por nome">
                     </div>
-                    <div class="form-group">
-                      &nbsp;<%= label_tag :email, "Email" %>&nbsp;
-                      <%= email_field_tag :email, "", class: "form-control" %>
-                    </div>
-                      <%= submit_tag "Ir", class:"btn btn-success" %>
-                  <% end %>
 
                   </div>
               </div><br>
@@ -39,7 +31,16 @@
         <%= form_for [:backsystem, @event]  do |f| %>
 
 
-          <%= f.collection_check_boxes :student_ids, @students, :id, :name%>
+          <div class="form-check">
+            <div class="checkbox">
+              <%= f.collection_check_boxes :student_ids, @students, :id, :name do |cb| %>
+                <div class="student-item">
+                  &nbsp; <label class="form-check-label"><%= cb.text %></label> <%= cb.check_box %> &nbsp; <%= cb.object.email %>
+                </div><br>
+              <% end %>
+            </div>
+          </div>
+
 
           <br><div class="row">
             <div class="col-md-1">
@@ -55,3 +56,12 @@
     </div>
   </div>
 </div>
+
+<script>
+  $("#searchName").on("keyup", function() {
+  	var value = $("#searchName").val().toLowerCase();
+  	$('.student-item label').filter(function() {
+  		$(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  	});
+  });
+</script>

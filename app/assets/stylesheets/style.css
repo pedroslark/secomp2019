@@ -13423,5 +13423,12 @@ ol.commentlist li .star-rating {
 }
 
 .lecture-text {
-  height: 220px
+  height: 220px;
+}
+
+.student-item input[type=checkbox] {
+  opacity: 1;
+  position: inherit;
+  float: left;
+  margin-top: 5px;
 }
