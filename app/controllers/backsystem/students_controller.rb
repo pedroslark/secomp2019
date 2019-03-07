@@ -13,7 +13,7 @@ before_action :set_student, :only => [:edit, :update, :destroy, :show]
   end
 
   def update
-    if @Student.update(student_params)
+    if @student.update(student_params)
       redirect_to backsystem_students_path, notice: "Aluno atualizado com Sucesso"
     else
       render :edit
