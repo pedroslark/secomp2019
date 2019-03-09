@@ -25,14 +25,18 @@ class Backsite::HomeController < BacksiteController
     @simposio = Symposium.new(symposium_params)
 
     file = params[:symposium][:file]
-    is_pdf = file.original_filename.include? ".pdf"
+    if file.nil?
+      is_pdf = false
+    else
+      is_pdf = file.original_filename.include? ".pdf"
+    end
 
-    if @simposio.valid? and !file.nil? and is_pdf
+    if @simposio.valid? and is_pdf
       SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
       redirect_to root_path, notice: "Simpósio enviado com sucesso. Prepare-se bem Padawan o/"
     else
       if file.nil? or !is_pdf
-        flash[:alert] = "PDF do simpósio é obrigatório (Somente PDF)"
+        flash[:alert] = "PDF do simpósio é obrigatório"
       end
       render :index
     end
