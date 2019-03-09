@@ -22,3 +22,13 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery_ujs
+
+
+$(document).on('ready page:load', function () {
+  $("#searchName").on("keyup", function() {
+  	var value = $("#searchName").val().toLowerCase();
+  	$('.student-item label').filter(function() {
+  		$(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  	});
+  });
+});

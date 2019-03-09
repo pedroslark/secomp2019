@@ -6541,6 +6541,11 @@ a,
     border-radius: 100px;
     -webkit-border-radius: 100px;
 }
+
+.overlap-z {
+  position: absolute;
+  z-index: 99999;
+}
 .radius-md {
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -13420,4 +13425,15 @@ ol.commentlist li .star-rating {
 
 .course-title {
 	height: 150px;
+}
+
+.lecture-text {
+  height: 220px;
+}
+
+.student-item input[type=checkbox] {
+  opacity: 1;
+  position: inherit;
+  float: left;
+  margin-top: 5px;
 }

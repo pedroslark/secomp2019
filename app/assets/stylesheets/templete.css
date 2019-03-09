@@ -164,6 +164,7 @@ h6 {
 	position: relative;
 	display: table;
     width: 100%;
+    margin-top: -50px;
 }
 .app-banner .container {
 

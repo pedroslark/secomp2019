@@ -29,13 +29,7 @@ class Backsystem::EventsController < BacksystemController
   end
 
   def show
-    if params[:name_search].present?
-      @students = Student.where(name: params[:name_search]).order(:name)
-    elsif params[:email].present?
-      @students = Student.where(email: params[:email]).order(:name)
-    else
-      @students = Student.all
-    end
+    @students = Student.all.order("name ASC")
   end
 
   # Revisar

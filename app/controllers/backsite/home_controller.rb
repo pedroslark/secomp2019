@@ -13,7 +13,7 @@ class Backsite::HomeController < BacksiteController
     @student.secomp_id = 1
 
     if @student.save
-      redirect_to root_path, notice: 'Cadastrado com sucesso. Descanse em paz Padawan, sua vaga está garantida \o/'
+      redirect_to root_path, notice: 'Cadastro realizado com sucesso!'
     else
       render :index
     end
@@ -33,14 +33,14 @@ class Backsite::HomeController < BacksiteController
 
     if @simposio.valid? and is_pdf
       SimposioSendMailer.send_mailer_symposium(@simposio,file).deliver_now
-      redirect_to root_path, notice: "Simpósio enviado com sucesso. Prepare-se bem Padawan o/"
+      redirect_to root_path, notice: "Formulário enviado com sucesso!"
     else
       if file.nil? or !is_pdf
         flash[:alert] = "PDF do simpósio é obrigatório"
       end
       render :index
     end
-    
+
   end
 
   private
@@ -55,7 +55,7 @@ class Backsite::HomeController < BacksiteController
           :secomp_id
       )
     end
-    
+
     def symposium_params
       params.require(:symposium).permit(
           :title,
