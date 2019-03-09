@@ -8,5 +8,5 @@
 
 Secomp.create!(name: 'secomp2019') unless Secomp.find_by_name("secomp2019")
 
-User.create!(email: 'admin@example.com', password:'password') if Rails.development?
-User.first_or_create!(email: ENV["EMAIL_RECEIVE_PET"], password: ENV["EMAIL_PASSWORD_PET"]) if Rails.production?
+User.first_or_create!(email: 'admin@example.com', password:'password') if Rails.env.development?
+User.first_or_create!(email: ENV["EMAIL_RECEIVE_PET"], password: ENV["EMAIL_PASSWORD_PET"]) if Rails.env.production?
