@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, skip: [:registrations]
 
   # Subscribe Students => Home page
   post "/"  => "backsite/home#create"
   post "/send_simposio" => "backsite/home#send_symposium"
   root 'backsite/home#index'
-  
+
   # System => Authenticate
   namespace :backsystem, path: "admin" do
     resources :students, :except => [:new, :create]
