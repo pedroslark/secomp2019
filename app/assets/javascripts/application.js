@@ -25,6 +25,10 @@
 
 
 $(document).on('ready page:load', function () {
+  $('.navbar-nav>li>a').on('click', function(){
+      $('.navbar-collapse').collapse('hide');
+  });
+  
   $("#searchName").on("keyup", function() {
   	var value = $("#searchName").val().toLowerCase();
   	$('.student-item label').filter(function() {
