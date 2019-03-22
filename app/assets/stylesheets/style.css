@@ -1779,10 +1779,10 @@ dl dd {
 /* >image-zoom */
 
 .dlab-img-effect.zoom-slow img {
-    transition: all 10s;
-    -moz-transition: all 10s;
-    -webkit-transition: all 10s;
-    -o-transition: all 10s;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
 }
 .dlab-img-effect.zoom-slow:hover img {
     -moz-transform: scale(1.2);
@@ -13428,7 +13428,7 @@ ol.commentlist li .star-rating {
 }
 
 .lecture-text {
-  height: 220px;
+  height: 150px;
 }
 
 .student-item input[type=checkbox] {
