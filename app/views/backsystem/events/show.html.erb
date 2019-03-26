@@ -34,9 +34,9 @@
           <div class="form-check">
             <div class="checkbox">
               <%= f.collection_check_boxes :student_ids, @students, :id, :name do |cb| %>
-                <div class="student-item">
+                <div class="student-item mb-3">
                   &nbsp; <label class="form-check-label"><%= cb.text %></label> <%= cb.check_box %> &nbsp; <%= cb.object.email %>
-                </div><br>
+                </div>
               <% end %>
             </div>
           </div>
