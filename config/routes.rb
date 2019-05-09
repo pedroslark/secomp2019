@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :secomps, :except => [:show]
     get "/" => "events#index"
     get "/events/:id" => "events#show",:as => "show" # mark presence event
+    get "/events/:id/show_report" => "events#show_report",:as => "show_report" # report from event
+    get "/reports" => "reports#index", :as => "index" #reports
   end
 
 end

@@ -32,6 +32,12 @@ class Backsystem::EventsController < BacksystemController
     @students = Student.all.order("name ASC")
   end
 
+  def show_report
+    @students = Student.all.order("name ASC")
+    @event = Event.find(params[:id])
+    @count = Event.count
+  end
+
   # Revisar
   def update
     if @event.update(event_params)

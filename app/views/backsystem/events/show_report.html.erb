@@ -1,0 +1,54 @@
+
+<div class="content2">
+  <div class="container">
+    <div class="admintable">
+      <div class="container">
+
+        <br><div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="h4">Alunos presentes em: <%= @event.name %></h4>
+              <div class="dlab-separator bg-primary"></div><br><br>
+
+              <div class="actions">
+                  <div class="row">
+
+                  </div>
+              </div><br>
+            </div>
+          </div>
+        </div>
+
+
+        <%= form_for [:backsystem, @event]  do |f| %>
+
+        <div class="table-responsive">
+          <table class="table table-sm table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Presença</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @event.students.each do |student| %>
+              <tr>
+                <td><%= student.name %></td>
+                <td><%= student.email %></td>
+                <td><%= (student.events.count/@count.to_f).round(2)*100 %>%</td>
+              </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+          <%end%>
+            <div class="col-md-1">
+              <%= button_to "Voltar", backsystem_events_path, method: :get, class: "btn btn-danger" %>
+            </div>
+          </div><br>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -37,17 +37,17 @@
 										<td><%= event.name %></td>
 
 										<td>
-												<%= button_to backsystem_show_path(event), method: :get, class: "btn btn-info" do %>
-                    			Marcar presença
-												<% end %>
+											<%= button_to backsystem_show_path(event), method: :get, class: "btn btn-info" do %>
+												Marcar presença
+											<% end %>
 										</td>
-										
+
 										<td>
-												<% button_to backsystem_show_path(event), method: :get, class: "btn btn-info" do %>
-                    			Gerar Relatório
-												<% end %>
+											<% button_to backsystem_show_report_path(event), method: :get, class: "btn btn-info" do %>
+												Detalhes
+											<% end %>
 										</td>
-										
+
 										<td>
 												<%= button_to edit_backsystem_event_path(event), method: :get, class: "btn btn-info" do %>
                     		<i class="ti-pencil"></i>
