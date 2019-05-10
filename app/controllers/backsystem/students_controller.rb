@@ -1,8 +1,15 @@
 class Backsystem::StudentsController < BacksystemController
+
 before_action :set_student, :only => [:edit, :update, :destroy, :show]
+
   def index
     @student = Student.new
     @students = Student.order("name ASC").all
+    @events = Event.order("name ASC").all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @students.to_csv }    
+    end
   end
 
   def destroy
